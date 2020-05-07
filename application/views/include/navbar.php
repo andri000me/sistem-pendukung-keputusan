@@ -18,11 +18,11 @@ $role = $this->session->userdata('role');
 
   <!-- Vendor CSS Files -->
   <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <!-- <link href="<?= base_url(); ?>assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
   <link href="<?= base_url(); ?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?= base_url(); ?>assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- <link href="<?= base_url(); ?>assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet"> -->
+  <!-- <link href="<?= base_url(); ?>assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
+  <!-- <link href="<?= base_url(); ?>assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
 
 
   <!-- Template Main CSS File -->

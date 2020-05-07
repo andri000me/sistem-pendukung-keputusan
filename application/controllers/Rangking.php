@@ -4,11 +4,9 @@ class Rangking extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->load->library('page');
 		$this->load->model('M_kriteria');
 		$this->load->model('M_alternatif');
 		$this->load->model('M_rangking');
-		// $this->page->setTitle('Rangking');
 	}
 
 	public function index()
@@ -38,7 +36,6 @@ class Rangking extends CI_Controller
 		 * Ambil data dari table SAW untuk perhitungan awal
 		 */
 		$table1 = $this->initialTableSAW($alternatif);
-		// $this->page->setData('table1', $table1);
 		$data['table1'] = $table1;
 
 
@@ -47,14 +44,12 @@ class Rangking extends CI_Controller
 		 * @var $dataSifat array
 		 */
 		$dataSifat = $this->getDataSifat();
-		// $this->page->setData('dataSifat', $dataSifat);
 		$data['dataSifat'] = $dataSifat;
 
 		/**
 		 * Mengambil nilai maksimal dan minimal berdasarkan sifat
 		 */
 		$dataValueMinMax = $this->getVlueMinMax($dataSifat);
-		// $this->page->setData('valueMinMax', $dataValueMinMax);
 		$data['dataValueMinMax'] = $dataValueMinMax;
 
 		/**
@@ -62,17 +57,14 @@ class Rangking extends CI_Controller
 		 */
 
 		$table2 = $this->getCountBySifat($dataSifat, $dataValueMinMax);
-		// $this->page->setData('table2', $table2);
 		$data['table2'] = $table2;
 
 		/**
 		 * Hitung perkalian bobot dengan nilai kriteria
 		 */
 		$bobot = $this->M_kriteria->getBobotKriteria();
-		// $this->page->setData('bobot', $bobot);
 		$data['bobot'] = $bobot;
 		$table3 = $this->getCountByBobot($bobot);
-		// $this->page->setData('table3', $table3);
 		$data['table3'] = $table3;
 
 		/**
@@ -89,17 +81,16 @@ class Rangking extends CI_Controller
 		 * Mengambil data yang sudah di rangking
 		 */
 		$tableFinal = $this->getDataRangking();
-		// $this->page->setData('tableFinal', $tableFinal);
 		$data['tableFinal'] = $tableFinal;
 
 
 		/**
 		 * Menghapus table SAW
 		 */
-		// $this->M_rangking->dropTable();
+		$this->M_rangking->dropTable();
 
 		$this->load->view('include/navbar');
-		$this->load->view('rangking/index3', $data);
+		$this->load->view('rangking/index', $data);
 		$this->load->view('include/footer');
 	}
 
@@ -179,7 +170,6 @@ class Rangking extends CI_Controller
 				}
 			}
 		}
-
 		return $dataValueMinMax;
 	}
 
@@ -253,7 +243,6 @@ class Rangking extends CI_Controller
 
 	private function getCountByBobot($bobot)
 	{
-
 		$sawData = $this->M_rangking->getAll();
 		foreach ($sawData as $point => $value) {
 			foreach ($value as $x => $z) {
@@ -278,7 +267,6 @@ class Rangking extends CI_Controller
 				}
 			}
 		}
-
 		return $this->M_rangking->getAll();
 	}
 

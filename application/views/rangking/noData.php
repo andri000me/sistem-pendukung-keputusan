@@ -1,5 +1,7 @@
-<h1>
-    <div class="alert alert-danger" role="alert">
-        Data Universitas kosong, Harap mengisi data universitas untuk menghitung rangking !
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2>Tidak Ada Data Alternatif</h2>
+        </div>
     </div>
-</h1>
+</div>
