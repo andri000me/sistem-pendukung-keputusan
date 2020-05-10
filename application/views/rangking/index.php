@@ -90,6 +90,7 @@
 <script>
 	$(document).ready(function() {
 		$('#example').DataTable({
+			"aaSorting": [],
 			dom: 'Bfrtip',
 			buttons: [
 				'copy', 'csv', 'excel', 'pdf', 'print'

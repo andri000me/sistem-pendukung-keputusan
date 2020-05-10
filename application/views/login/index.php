@@ -21,7 +21,7 @@
                     <div class="d-none d-lg-block col-lg-4">
                         <div class="slider-light">
                             <div class="slick-slider">
-                                <div>
+                                <div >
                                     <!-- <div class="width: 100%; display: inline-block;"> -->
                                         <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-deep-blue">
                                             <div class="slide-img-bg" style="background-image: url('<?= base_url('assets/img/loginbg.jpg'); ?>');"></div>
